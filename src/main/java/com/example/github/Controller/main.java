@@ -96,13 +96,7 @@ public class main {
         return  "index";
     }
     
-   // @GetMapping("/comm")
-    public String getComm(Model model){
-        List<String>comm=gitHubService.getCommit("vijaykumarp2","helloworld","hellopart2");
-        model.addAttribute("comm",comm);
-        System.out.printf(comm.toString());
-        return  comm.toString();
-    }
+   
     
     private String extractOwner(String repoUrl) {
 		String[] parts=repoUrl.replace("url=https%3A%2F%2Fgithub.com%2F", "").split("%2F");
